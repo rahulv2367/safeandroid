@@ -1,0 +1,18 @@
+// Root-level build.gradle file
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.0' // Make sure this is the latest version
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0' // If using Kotlin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

@@ -1,0 +1,35 @@
+// Module-level build.gradle file (for the 'app' module)
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android' // If using Kotlin
+}
+
+android {
+    compileSdk 35 // Use the latest compileSdk version
+    defaultConfig {
+        applicationId "com.example.myandroidapp"
+        minSdk 21 // Minimum SDK version you want to support
+        targetSdk 35 // Target SDK version you want to build for
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.9.0' // If using Kotlin
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1' // If using Kotlin
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
